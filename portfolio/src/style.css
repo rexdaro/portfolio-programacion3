@@ -141,3 +141,32 @@ header h1{
 }   
 
 
+/*----------------------------Css footer*-------------------------------*/
+h5{
+    margin-top: 2rem;
+    color: rgb(133, 134, 134);
+}
+.icon_footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.icon_De_Contacto{
+    width: 50px;
+    
+    padding: 5px;
+    display: flex;
+    align-items: end;
+}
+.icon_De_Footer{
+    display: flex;
+    align-items: end;
+    width: 40px;
+    height: 35;
+}
+.icon_De_Footer:hover{
+cursor: pointer;
+transition: 2s;
+transform: scale(1.2);
+}
