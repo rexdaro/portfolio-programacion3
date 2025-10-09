@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,74 @@
     <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="body" id="body">
 
     <header id="header" class="header">
-        <h1>Enzo Cercola</h1>
-        
+        <a href="" class="logo">
+            <p>Manuel Rivas</p>
+        </a>
+
+
         <nav class="nav">
-          <div class="boton-menu">Habilidades</div>
-          <div class="boton-menu">Formacion</div>
-          <div class="boton-menu">Proyectos</div>
-          <div class="boton-menu">Contacto</div>
+            <a class="boton-menu">
+                <p>Habilidades</p>
+            </a>
+            <a class="boton-menu">
+                <p>Formacion</p>
+            </a>
+            <a class="boton-menu">
+                <p>Proyectos</p>
+            </a>
+            <a class="boton-menu">
+                <p>Contacto</p>
+            </a>
         </nav>
-        
+
     </header>
 
     <main id="main" class="main">
 
         <section>
             <div class="div_section_primary">
-              <div class="div_perfil">
+                <div class="div_perfil">
 
-                <div class="div_texto_perfil">
-                  <h2>Hola! Soy Manuel Rivas</h2>
-                  <h3>Tecnico universitario en programación</h3>
-                  <p>Soy Desarrollador Front-End, me encanta codear y
-                   crear proyectos que sean funcionales y visualmente atractivos.</p>
+                    <div class="div_texto_perfil">
+                        <div class="div_texto_introduccion">
+                            <h2>Hola! Soy Manuel Rivas</h2>
+                            <h3>Tecnico universitario en programación</h3>
+                            <p>Soy Desarrollador Front-End, me encanta codear y
+                                crear proyectos que sean funcionales y visualmente atractivos.</p>
+                        </div>
+
+
+                        <div class="div_botones_perfil">
+                            <div class="div-boton-descargar-cv">
+                                <div>Descargar CV</div>
+                                <img class="icono" src="public/images/icono-descarga.svg" alt="icono-descarga">
+                            </div>
+
+                            <div class="div-iconos-perfil">
+                                <a href=""><img class="icono" src="public/images/icono-github.svg"
+                                        alt="icono-github"></a>
+                                <a href=""><img class="icono" src="public/images/icono-linkedin.svg"
+                                        alt="icono-linkedin"></a>
+                                <a href=""><img class="icono" src="public/images/icono-ws.svg" alt="icono-whatsapp"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div_imagen_perfil">
+                        <img class="foto_perfil"
+                            src="https://media.licdn.com/dms/image/v2/D4D03AQFYu4J_O-_MpA/profile-displayphoto-crop_800_800/B4DZijzsB7HYAM-/0/1755094893432?e=1762387200&v=beta&t=sB1wogJHea-Vu29eE9umNRnVNAoqcy3iEgCA_aboOH0"
+                            alt="Manuel Rivas">
+                    </div>
+
                 </div>
 
-                <div class="div_imagen_perfil">
-                  <img class="foto_perfil" src="https://media.licdn.com/dms/image/v2/D4D03AQFYu4J_O-_MpA/profile-displayphoto-crop_800_800/B4DZijzsB7HYAM-/0/1755094893432?e=1762387200&v=beta&t=sB1wogJHea-Vu29eE9umNRnVNAoqcy3iEgCA_aboOH0" alt="Manuel Rivas">
-                </div>
-
-              </div>
-                
 
             </div>
         </section>
@@ -74,9 +108,12 @@
             <div class="div_section_secondary">
                 <h2>Proyectos</h2>
                 <ul>
-                    <li><strong>Portfolio Personal:</strong> Un sitio web que muestra mis proyectos y habilidades. <a href="#">Ver Proyecto</a></li>
-                    <li><strong>Aplicación de Tareas:</strong> Una aplicación web para gestionar tareas diarias con funcionalidades CRUD. <a href="#">Ver Proyecto</a></li>
-                    <li><strong>Tienda en Línea:</strong> Un sitio de comercio electrónico con carrito de compras y pasarela de pago. <a href="#">Ver Proyecto</a></li>
+                    <li><strong>Portfolio Personal:</strong> Un sitio web que muestra mis proyectos y habilidades. <a
+                            href="#">Ver Proyecto</a></li>
+                    <li><strong>Aplicación de Tareas:</strong> Una aplicación web para gestionar tareas diarias con
+                        funcionalidades CRUD. <a href="#">Ver Proyecto</a></li>
+                    <li><strong>Tienda en Línea:</strong> Un sitio de comercio electrónico con carrito de compras y
+                        pasarela de pago. <a href="#">Ver Proyecto</a></li>
                 </ul>
             </div>
         </section>
@@ -90,29 +127,35 @@
     </main>
 
     <footer id="footer" class="footer">
-       <h5>Copyright © | ♥ Coded with by
-        <Strong>Manuel Rivas & Enzo Cercola</Strong>
-       </h5>
-       <div class="icon_footer">
+        <h5>Copyright © | ♥ Coded with by
+            <Strong>Manuel Rivas & Enzo Cercola</Strong>
+        </h5>
+        <div class="icon_footer">
             <a href="https://www.linkedin.com/in/manuel-rivas-a56709200/" target="_blank">
-                <div class="icon_De_Contacto"><img src="iconos/iconos_footer/linkedin-svgrepo-com.png" alt="css" class="icon_De_Footer"></div>
+                <div class="icon_De_Contacto"><img src="iconos/iconos_footer/linkedin-svgrepo-com.png" alt="css"
+                        class="icon_De_Footer"></div>
             </a>
             <a href="https://mail.google.com/mail/?view=cm&to=rexdaro@gmail.com" target="_blank">
-                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/mail-forward-svgrepo-com.png" alt="css" class="icon_De_Footer"></div>
+                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/mail-forward-svgrepo-com.png" alt="css"
+                        class="icon_De_Footer"></div>
             </a>
             <a href="https://wa.me/542617047380" target="_blank">
-                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/whatsapp-logo-variant-svgrepo-com.png" alt="css" class="icon_De_Footer"></div>
+                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/whatsapp-logo-variant-svgrepo-com.png"
+                        alt="css" class="icon_De_Footer"></div>
             </a>
             <a href="https://github.com/rexdaro" target="_blank">
-                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/github-142-svgrepo-com.png" alt="css" class="icon_De_Footer"></div>
+                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/github-142-svgrepo-com.png" alt="css"
+                        class="icon_De_Footer"></div>
             </a>
             <a href="https://www.instagram.com/manuel_rivasb/" target="_blank">
-                <div class="icon_De_Contacto"><img src="iconos/iconos_footer/instagram-svgrepo-com (1).png" alt="css" class="icon_De_Footer"></div>
+                <div class="icon_De_Contacto"><img src="iconos/iconos_footer/instagram-svgrepo-com (1).png" alt="css"
+                        class="icon_De_Footer"></div>
             </a>
-        
-       </div>
+
+        </div>
     </footer>
-    
+
 </body>
-  <script src="src/main.js"></script>
+<script src="src/main.js"></script>
+
 </html>
