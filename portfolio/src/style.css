@@ -22,8 +22,8 @@ html {
 
 .body {
     background-color: rgb(28, 30, 33);
-;
-;
+    ;
+    ;
 }
 
 /* ------------------Estilos para los iconos------------------------ */
@@ -37,16 +37,21 @@ html {
 /* ------------------Estilos para el Header y la barra de navegacion------------------------ */
 
 header {
-    background-color: rgb(48, 51, 56);
-    height: 5rem;
     display: flex;
-    border-top: 0cap;
-    position: inherit;
-    position: sticky;
-    box-shadow: 2px 5px 20px;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
+    height: 5rem;
+    width: 100%;
+    padding: 0 3rem; /* Simplificado para consistencia */
+    box-sizing: border-box; /* Evita problemas con padding y width */
+
+    /* --- Propiedades para el header fijo --- */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    background-color: rgb(28, 30, 33); /* Mismo fondo que el body */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .nav {
@@ -102,13 +107,15 @@ header {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    height: calc(-9rem + 100vh);
+    min-height: calc(-9rem + 100vh);
     display: flex;
     border-radius: 20px;
     color: white;
 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
 }
 
 .div_section_secondary {
@@ -117,12 +124,13 @@ header {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    height: calc(-9rem + 100vh);
+    min-height: calc(-9rem + 100vh);
     display: flex;
     border-radius: 20px;
     color: white;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /*----------------------------Css seccion  perfil*-------------------------------*/
@@ -151,26 +159,33 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-.div-boton-descargar-cv {
-    width: 50%;
-    color: black;
-    display: flex;
+.boton-descargar-cv {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    height: 3rem;
-    background-color: rgba(255, 255, 255, 0.494);
-    border-radius: 5px;
-    margin-top: 1rem;
+    gap: 0.75rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #00f3ff;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.div-boton-descargar-cv:hover {
+.boton-descargar-cv:hover {
     background-color: rgb(0, 195, 255);
     transform: scale(1.05);
-    transition: 0.5s;
+}
+
+.boton-descargar-cv .icono {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .div-iconos-perfil {
@@ -197,7 +212,7 @@ header {
 
 .div_perfil .div_imagen_perfil {
     background: linear-gradient(to right,
-            rgb(22, 38, 182),
+            rgb(0, 195, 255),
             rgba(255, 255, 255, 0)),
         linear-gradient(to right, rgba(255, 255, 255, 0), rgba(128, 128, 128, 0));
     background-blend-mode: overlay;
@@ -215,7 +230,7 @@ header {
 
 .div_perfil .div_imagen_perfil:hover {
     background: linear-gradient(to right,
-            rgb(42, 61, 235),
+            rgb(255, 255, 255),
             rgba(255, 255, 255, 0)),
         linear-gradient(to right, rgba(255, 255, 255, 0), rgba(128, 128, 128, 0));
 }
@@ -248,7 +263,7 @@ header {
 
 /*----------------------------Css seccion  sobre mi*-------------------------------*/
 
-.titulo-secundario{
+.titulo-secundario {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -258,14 +273,14 @@ header {
     margin: 2rem 0rem;
 }
 
-.contenedor-sobre-mi{
+.contenedor-sobre-mi {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 2rem;
 }
 
-.div-texto-sobre-mi{
+.div-texto-sobre-mi {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -273,21 +288,21 @@ header {
     margin-top: 2rem;
 }
 
-.titulos-principales{
+.titulos-principales {
     margin-left: 1rem;
     font-family: Poppins, sans-serif;
     font-weight: 700;
     font-size: 4vh;
 }
 
-.parrafo-sobre-mi{
+.parrafo-sobre-mi {
     margin-top: 1rem;
     margin-left: 1rem;
     font-family: Poppins, sans-serif;
     font-size: 2vh;
 }
 
-.programador-animado{
+.programador-animado {
     width: 45vh;
 }
 
@@ -295,7 +310,7 @@ header {
 
 
 /*----------------------------Css seccion  habilidades*-------------------------------*/
-.contenedor-habilidades{
+.contenedor-habilidades {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -303,18 +318,18 @@ header {
     justify-content: center;
 }
 
-.div-iconos-habilidades{
+.div-iconos-habilidades {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.div-iconos-habilidades{
+.div-iconos-habilidades {
     display: flex;
     margin: 3rem;
 }
 
-.div-icono-habilidad{
+.div-icono-habilidad {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -324,45 +339,46 @@ header {
     filter: grayscale(.8);
 }
 
-.div-icono-habilidad:hover{
+.div-icono-habilidad:hover {
     opacity: 1;
     transform: scale(1.15);
     filter: grayscale(0);
 }
-.icono-habilidad{
+
+.icono-habilidad {
     width: 8vh;
 }
 
 
 /*----------------------------Css seccion  formacion*-------------------------------*/
 
-.container_div_formacion_iconos{
+.container_div_formacion_iconos {
     display: flex;
     width: 100%;
     justify-content: center;
     max-width: 70rem;
 }
 
-.container_div_formacion_iconos_dentro{
+.container_div_formacion_iconos_dentro {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.div_formacion_iconos{
+.div_formacion_iconos {
     width: 20rem;
     display: flex;
 }
 
-.container-formaciones{
+.container-formaciones {
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card-formacion{
+.card-formacion {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,57 +389,444 @@ header {
     width: 20%;
 }
 
-.card-formacion:hover{
+.card-formacion:hover {
     opacity: 1;
     transform: scale(1.15);
     filter: grayscale(0);
 }
 
-.img_formacion{
+.img_formacion {
     width: 100%;
     border-radius: 15px;
 }
 
-.parrafo_img_formacion{
+.parrafo_img_formacion {
     font-size: 18px;
 }
 
-.parrafo_img_formacion{
+.parrafo_img_formacion {
     text-align: center;
 }
 
-/*----------------------------Css footer*-------------------------------*/
-h5 {
-    margin-top: 2rem;
-    color: rgb(133, 134, 134);
+/*----------------------------Css seccion  proyectos*-------------------------------*/
+
+
+
+
+
+.container-proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.icon_footer {
+
+.proyecto{
+    position: relative; 
+    
+}
+
+.div-imagen-proyecto {
+    position: absolute;
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    justify-content: center;
+}
+
+.imagen-proyecto {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.div-proyecto{
+    transition: 0.3s;
+}
+
+.div-proyecto:hover {
+    transform: scale(1.15);
+    transition: 0.3s;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   
+    align-items: center;
+
+}
+
+.titulo-proyecto{
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 0.5rem;
+    text-shadow: black 1px 1px 5px;
+}
+
+
+
+.iconos-demo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.iconos-vista-previa {
+    width: 2rem;
+    display: flex;    
+    cursor: pointer;
+    margin: 0rem 2rem 1rem 2rem;
+    opacity: 0.7;
+}
+
+
+
+
+/* ------------------------------------------------------ */
+
+
+
+
+
+.descripcion-proyecto{
+    font-size: 0.75rem;
+    height: 36%;
+    text-align: justify;
+    
+    width: 90%;
+}
+
+
+.div-descripcion-proyecto {
+    background-color: rgb(226, 226, 226);
+    border-radius: 15px;
+    width: 20rem;
+    height: 20rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.3s;
+    
+}
+
+.div-descripcion-proyecto p{
+    text-shadow: none;
+}
+
+.div-descripcion-proyecto:hover {
+    
+    opacity: 1;
+    transition: 0.3s;
+}   
+
+
+
+
+.iconos-tecnologias-utilizadas {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: end;
+    justify-content: center;
+    
 }
 
-.icon_De_Contacto {
-    width: 50px;
 
-    padding: 5px;
+.contenedor-div-icono-tecnologia{
+    font-size: 12px;
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.icon_De_Footer {
-    display: flex;
-    align-items: end;
-    width: 40px;
-    height: 35;
-}
-
-.icon_De_Footer:hover {
+.iconos-tecnologias{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
     cursor: pointer;
-    transition: 2s;
+    
+}
+
+.contenedor-div-icono-tecnologia:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+.contenedor-div-icono-demo{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    margin: 0.5rem;
+    margin-top: 0;
+    
+}
+
+.iconos-demo-click{
+    width: 2rem;
+    display: flex;    
+    cursor: pointer;
+    margin-right: 0.5rem;
+    opacity: 0.7;
+}
+
+.iconos-demo p:hover{
+    color: #0084ff;
+    transition: color 0.3s ease;
+}
+
+
+/*----------------------------Css seccion contacto*-------------------------------*/
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    color: #bec3c9;
+    font-size: 1.1rem;
+}
+
+.form-input,
+.form-textarea {
+    background-color: rgb(28, 30, 33);
+    border: 1px solid rgb(48, 51, 56);
+    border-radius: 8px;
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-family: Poppins, sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #858686;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #00f3ff;
+    box-shadow: 0 0 10px rgba(0, 217, 255, .2);
+}
+
+.form-boton {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #000;
+    background-color: #00f3ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1rem;
+}
+
+.form-boton:hover {
+    background-color: rgb(0, 195, 255);
+    transform: scale(1.02);
+}
+
+
+/*----------------------------Css footer*-------------------------------*/
+.footer {
+    background-color: rgb(28, 30, 33);
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgb(48, 51, 56);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    color: #858686;
+    font-size: 1rem;
+}
+
+.footer-copyright strong {
+    color: #bec3c9;
+    font-weight: 600;
+}
+
+.footer-iconos {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-icono {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.footer-icono:hover {
+    opacity: 1;
     transform: scale(1.2);
 }
 
+/*----------------------------Media Queries para Responsividad*-------------------------------*/
 
+/* --- Estilos para el menú de hamburguesa --- */
+.boton-hamburguesa,
+.boton-cerrar {
+    display: none; /* Ocultos por defecto */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-hamburguesa img,
+.boton-cerrar img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+/* --- Tablet (hasta 1024px) --- */
+@media (max-width: 1024px) {
+    .div_perfil, .contenedor-sobre-mi {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div_perfil .div_texto_perfil, .div-texto-sobre-mi {
+        width: 90%;
+        align-items: center;
+    }
+
+    .div_perfil .div_imagen_perfil {
+        margin-top: 2rem;
+    }
+
+    .div-imagen-sobre-mi {
+        margin-top: 2rem;
+    }
+
+    .card-formacion {
+        width: 40%;
+    }
+}
+
+
+/* --- Móvil (hasta 768px) --- */
+@media (max-width: 768px) {
+    /* --- Header y Navegación --- */
+    .boton-hamburguesa {
+        display: block; /* Muestra el botón de hamburguesa */
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 100;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(18, 20, 22, 0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav.visible {
+        transform: translateX(0); /* Muestra el menú */
+    }
+
+    .nav .boton-menu {
+        font-size: 1.8rem;
+    }
+
+    .boton-cerrar {
+        display: block; /* Muestra el botón de cerrar */
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    /* --- Secciones Generales --- */
+    .div_section_primary, .div_section_secondary {
+        padding: 4rem 1rem;
+    }
+
+    .titulo-secundario {
+        font-size: 2.5rem;
+    }
+
+    /* --- Perfil --- */
+    .div_texto_introduccion h2 {
+        font-size: 2.2rem;
+    }
+    .div_texto_introduccion h3 {
+        font-size: 1.3rem;
+    }
+
+    /* --- Formación --- */
+    .card-formacion {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    /* --- Proyectos --- */
+    .div-proyecto {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    /* --- Contacto --- */
+    .form-contacto {
+        width: 95%;
+    }
+
+    /* --- Footer --- */
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+}

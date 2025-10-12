@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Manuel Rivas Portfolio</title>
     <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +19,14 @@
             <p>Manuel Rivas</p>
         </a>
 
+        <button class="boton-hamburguesa" id="abrir-menu" aria-label="Abrir menú">
+            <img src="public/images/proyectos/menu-svgrepo-com.svg" alt="Abrir menú">
+        </button>
 
-        <nav class="nav">
+        <nav class="nav" id="nav">
+            <button class="boton-cerrar" id="cerrar-menu" aria-label="Cerrar menú">
+                <img src="public/images/proyectos/close.svg" alt="Cerrar menú">
+            </button>
             <a href="#section_habilidades" class="boton-menu">
                 <p>Habilidades</p>
             </a>
@@ -54,17 +60,19 @@
 
 
                         <div class="div_botones_perfil">
-                            <div class="div-boton-descargar-cv">
-                                <div>Descargar CV</div>
+
+                            <a target="_blank" href="https://drive.google.com/file/d/1Cykma5dmUW1c-a79nEPLgoJ4rX7DLl1D/view?usp=sharing" class="boton-descargar-cv" target="_blank" rel="noopener noreferrer">
+                                Descargar CV
                                 <img class="icono" src="public/images/icono-descarga.svg" alt="icono-descarga">
-                            </div>
+                            </a>
+                            
 
                             <div class="div-iconos-perfil">
-                                <a href=""><img class="icono" src="public/images/icono-github.svg"
+                                <a target="_blank" href="https://github.com/rexdaro"><img class="icono" src="public/images/icono-github.svg"
                                         alt="icono-github"></a>
-                                <a href=""><img class="icono" src="public/images/icono-linkedin.svg"
+                                <a target="_blank" href="https://www.linkedin.com/in/manuel-rivas-a56709200/"><img class="icono" src="public/images/icono-linkedin.svg"
                                         alt="icono-linkedin"></a>
-                                <a href=""><img class="icono" src="public/images/icono-ws.svg" alt="icono-whatsapp"></a>
+                                <a target="_blank" href="https://wa.me/542617047380"><img class="icono" src="public/images/icono-ws.svg" alt="icono-whatsapp"></a>
                             </div>
                         </div>
                     </div>
@@ -236,31 +244,31 @@
                                 <div class="card-formacion">
                                     <img class="img_formacion" src="public/images/formaciones/formacion-inncome.png"
                                         alt="Utn mendoza">
-                                    <p class="parrafo_img_formacion">Tecnico Universitario en Programación</p>
+                                    <p class="parrafo_img_formacion">Desarrollador Front-end & Conexión de API (Next.js/TypeScript)</p>
                                 </div>
 
                                 <div class="card-formacion">
                                     <img class="img_formacion" src="public/images/formaciones/formacion-react-udemy-daddb444.png"
                                         alt="Utn mendoza">
-                                    <p class="parrafo_img_formacion">Tecnico Universitario en Programación</p>
+                                    <p class="parrafo_img_formacion">React: De Cero a Experto (Hooks, MERN, Redux, Typescript)</p>
                                 </div>
 
                                 <div class="card-formacion">
                                     <img class="img_formacion" src="public/images/formaciones/formacion-Alura-172b6479.png"
                                         alt="Utn mendoza">
-                                    <p class="parrafo_img_formacion">Tecnico Universitario en Programación</p>
+                                    <p class="parrafo_img_formacion">Desarrollador Full-Stack (Java/Front-end)</p>
                                 </div>
 
                                 <div class="card-formacion">
                                     <img class="img_formacion" src="public/images/formaciones/formacion-frecodecamp-153018c0.png"
                                         alt="Utn mendoza">
-                                    <p class="parrafo_img_formacion">Tecnico Universitario en Programación</p>
+                                    <p class="parrafo_img_formacion">Fundamentos de Programación: Lógica y POO</p>
                                 </div>
 
                                 <div class="card-formacion">
                                     <img class="img_formacion" src="public/images/formaciones/formacion-javascript-aeab7090.png"
                                         alt="Utn mendoza">
-                                    <p class="parrafo_img_formacion">Tecnico Universitario en Programación</p>
+                                    <p class="parrafo_img_formacion">JavaScript Avanzado: APIs, DOM y Asincronía (async/await)</p>
                                 </div>
 
                             </div>
@@ -276,53 +284,978 @@
 
         <section id="section_proyectos">
             <div class="div_section_primary">
-                <h2>Proyectos</h2>
-                <ul>
-                    <li><strong>Portfolio Personal:</strong> Un sitio web que muestra mis proyectos y habilidades. <a
-                            href="#">Ver Proyecto</a></li>
-                    <li><strong>Aplicación de Tareas:</strong> Una aplicación web para gestionar tareas diarias con
-                        funcionalidades CRUD. <a href="#">Ver Proyecto</a></li>
-                    <li><strong>Tienda en Línea:</strong> Un sitio de comercio electrónico con carrito de compras y
-                        pasarela de pago. <a href="#">Ver Proyecto</a></li>
-                </ul>
+                <h2 class="titulo-secundario">Proyectos</h2>
+                
+
+                <div class="container-proyectos">
+
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/apiclima.png" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Clima Mundial</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Clima Mundial</p>
+                                <p class="descripcion-proyecto">Aplicación Front-end construida con HTML/CSS/TS, destacando la integración y manejo asíncrono de APIs externas para renderizar datos climáticos globales en tiempo real.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="html">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/typescript-icon.svg" alt="javascript">
+                                        <p>TypeScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto_playerZone-336a45cf.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">E-Comerce | PlayerZone</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">E-Comerce | PlayerZone</p>
+                                <p class="descripcion-proyecto">PlayerZone es un emocionante proyecto de comercio electrónico de productos de PC. Desarrollado con HTML, CSS y JavaScript, ofrece una experiencia de compra en línea fácil y conveniente, con una amplia selección de componentes y tecnología.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="html">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="javascript">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    
+                    
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-poke-api.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Poké Api</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Poké Api</p>
+                                <p class="descripcion-proyecto">Integración de la PokéAPI en un catálogo web con HTML/CSS/JS puro, enfocada en la creación de una funcionalidad de búsqueda dinámica y la visualización interactiva de datos de Pokémon.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="html">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="javascript">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-simpsons.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Api Simpsons</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Api Simpsons</p>
+                                <p class="descripcion-proyecto">Integración de la Api Simpsons en un catálogo web con HTML/CSS/TS, enfocada en la creación de una funcionalidad de búsqueda dinámica y la visualización interactiva de datos de los personajes de Los Simpsons.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="html">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/typescript-icon.svg" alt="TypeScript">
+                                        <p>TypeScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-notas-de-vos.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Notas De Voz Con IA</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Notas De Voz Con IA</p>
+                                <p class="descripcion-proyecto">Aplicación Front-end con persistencia de datos (LocalStorage), implementando Speech-to-Text para la transcripción y lógica de IA para resumir el contenido, demostrando manejo de tecnologías web avanzadas.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="html">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-reloj.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Reloj Interactivo</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Reloj Interactivo</p>
+                                <p class="descripcion-proyecto">Reloj digital en tiempo real desarrollado con JavaScript para una gestión precisa del tiempo. Destaca por la manipulación interactiva del DOM para permitir la personalización del diseño de fondo y el cambio de formato de hora (militar/normal).</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="html">
+                                        <p>HTML</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto_calculadora-dac715e0.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Calculadora React</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Calculadora React</p>
+                                <p class="descripcion-proyecto">Calculadora Front-end creada con React, demostrando dominio en el manejo de estados (useState) y Hooks para la lógica de operaciones. Énfasis en la arquitectura de componentes reutilizables y un diseño responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-react.svg" alt="React">
+                                        <p>React</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto_juegoCartas-fd471f8d.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Juego de Cartas</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Juego de Cartas</p>
+                                <p class="descripcion-proyecto">Implementación de un juego de Blackjack con HTML/CSS/JS puro, enfocada en la lógica de juego avanzada, el manejo de arrays para el mazo y las manos, y el control de flujo para gestionar turnos, apuestas, y la detección de ganadores (Score/Bust).</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto_portfolio-e4d43185.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Portfolio Personal</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Portfolio Personal</p>
+                                <p class="descripcion-proyecto">Este es mi portfolio personal, donde muestro mis proyectos y habilidades como desarrollador web. Está construido con HTML, CSS y JavaScript, y es completamente responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-blog-yamaha.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Blog Yamaha</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-demo.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-negro.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Blog Yamaha</p>
+                                <p class="descripcion-proyecto">Este es un blog sobre la marca Yamaha, donde comparto noticias, reseñas y contenido relacionado con sus productos. Está construido con HTML, CSS y JavaScript, y es completamente responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                     <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-conversor-de-unidades.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Conversor de Unidades</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-demo.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-negro.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Conversor de Unidades</p>
+                                <p class="descripcion-proyecto">Este es un proyecto de conversión de unidades, donde los usuarios pueden convertir entre diferentes unidades de medida. Está construido con HTML, CSS y TypeScript, y es completamente responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/typescript-icon.svg" alt="TypeScript">
+                                        <p>TypeScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-encriptador.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Encriptador de Texto</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-demo.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-negro.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Encriptador de Texto</p>
+                                <p class="descripcion-proyecto">Este es un proyecto de encriptación de texto, donde los usuarios pueden encriptar y desencriptar mensajes. Está construido con HTML, CSS y JavaScript, y es completamente responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-juego-culebrita.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Snake Game</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Snake Game</p>
+                                <p class="descripcion-proyecto">Este es un proyecto de juego de la serpiente, donde los usuarios pueden jugar y controlar una serpiente que crece al comer comida. Está construido con HTML, CSS y JavaScript, y es completamente responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                    <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-restaurant.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Restaurante</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Restaurante</p>
+                                <p class="descripcion-proyecto">Menú de restaurante desarrollado con HTML y CSS puro, demostrando dominio en diseño responsivo (Media Queries, Flexbox/Grid) y la creación de una experiencia de usuario óptima adaptable a cualquier dispositivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+                                         <!-- ---------------------------------comienzo proyecto--------------------------------- -->
+
+                    <div class="div-proyecto">
+
+                    
+                        <div class="proyecto">
+                            
+                            <div class="div-imagen-proyecto">
+
+                                <img class="imagen-proyecto" src="public/images/proyectos/proyecto-susuki.jpg" alt="proyecto1">
+
+                                <div class="overlay">
+                                    <p class="titulo-proyecto">Replica pagina de susuki</p>
+
+                                    <div class="iconos-demo">
+                                        <img class="iconos-vista-previa" src="public/images/icono-vista-previa.svg" alt="vista previa">
+                                        <img class="iconos-vista-previa" src="public/images/icono-github-blanco.svg" alt="github">                                
+                                    </div>
+
+                                </div>
+                                
+
+                            </div>
+                            <div class="div-descripcion-proyecto">
+                                <p class="titulo-proyecto">Replica pagina de susuki</p>
+                                <p class="descripcion-proyecto">Este es un proyecto que replica la página oficial de Suzuki, mostrando información sobre sus vehículos y servicios. Está construido con HTML, CSS y JavaScript, y es completamente responsivo.</p>
+                                <p class="tecnologias-utilizadas">tecnologias utilizadas:</p>
+                                <div class="iconos-tecnologias-utilizadas">
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-javascript.svg" alt="JavaScript">
+                                        <p>JavaScript</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-css3.svg" alt="css">
+                                        <p>CSS3</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-tecnologia">
+                                        <img class="iconos-tecnologias" src="public/images/icono-html.svg" alt="HTML">
+                                        <p>HTML</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="iconos-demo">
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-demo.svg" alt="demo">
+                                        <p>Demo</p>
+                                    </div>
+
+                                    <div class="contenedor-div-icono-demo">
+                                        <img class="iconos-demo-click" src="public/images/icono-github-negro.svg" alt="github"> 
+                                        <p>GitHub</p> 
+                                    </div>                              
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- -----------------------------------fin proyecto----------------------------------- -->
+
+                </div>
+                
+
+
+
             </div>
         </section>
 
         <section id="section_contacto">
             <div class="div_section_secondary">
-                <h2>Contacto</h2>
-                <p>Email: <a href="mailto:rexdaro@gmail.com">rexdaro@gmail.com</a></p>
+                <h2 class="titulo-secundario">Contacto</h2>
+                <form class="form-contacto" action="https://formsubmit.co/rexdaro@gmail.com" method="POST" target="_blank">
+                    <div class="form-grupo">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" class="form-textarea" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-boton">Enviar Mensaje</button>
+                </form>
             </div>
-
+        </section>
 
     </main>
 
     <footer id="footer" class="footer">
-        <h5>Copyright © | ♥ Coded with by
-            <Strong>Manuel Rivas & Enzo Cercola</Strong>
-        </h5>
-        <div class="icon_footer">
-            <a href="https://www.linkedin.com/in/manuel-rivas-a56709200/" target="_blank">
-                <div class="icon_De_Contacto"><img src="iconos/iconos_footer/linkedin-svgrepo-com.png" alt="css"
-                        class="icon_De_Footer"></div>
-            </a>
-            <a href="https://mail.google.com/mail/?view=cm&to=rexdaro@gmail.com" target="_blank">
-                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/mail-forward-svgrepo-com.png" alt="css"
-                        class="icon_De_Footer"></div>
-            </a>
-            <a href="https://wa.me/542617047380" target="_blank">
-                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/whatsapp-logo-variant-svgrepo-com.png"
-                        alt="css" class="icon_De_Footer"></div>
-            </a>
-            <a href="https://github.com/rexdaro" target="_blank">
-                <div class="icon_De_Contacto"><img src="/iconos/iconos_footer/github-142-svgrepo-com.png" alt="css"
-                        class="icon_De_Footer"></div>
-            </a>
-            <a href="https://www.instagram.com/manuel_rivasb/" target="_blank">
-                <div class="icon_De_Contacto"><img src="iconos/iconos_footer/instagram-svgrepo-com (1).png" alt="css"
-                        class="icon_De_Footer"></div>
-            </a>
-
+        <div class="footer-contenido">
+            <p class="footer-copyright">
+                Copyright © 2025 | Coded with ♥ by <strong>Manuel Rivas & Enzo Cercola</strong>
+            </p>
+            <div class="footer-iconos">
+                <a href="https://www.linkedin.com/in/manuel-rivas-a56709200/" target="_blank" title="LinkedIn">
+                    <img src="public/images/icono-linkedin.svg" alt="LinkedIn" class="footer-icono">
+                </a>
+                <a href="https://github.com/rexdaro" target="_blank" title="GitHub">
+                    <img src="public/images/icono-github.svg" alt="GitHub" class="footer-icono">
+                </a>
+                <a href="https://wa.me/542617047380" target="_blank" title="WhatsApp">
+                    <img src="public/images/icono-ws.svg" alt="WhatsApp" class="footer-icono">
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&to=rexdaro@gmail.com" target="_blank" title="Email">
+                    <img src="public/images/proyectos/email-icono.svg" alt="Email" class="footer-icono">
+                </a>
+            </div>
         </div>
     </footer>
 
