@@ -61,7 +61,7 @@ header {
 }
 
 .logo {
-  margin-left: 3rem;
+ 
   text-decoration: none;
   color: inherit;
   font-size: 2rem;
@@ -419,9 +419,11 @@ header {
 .div-imagen-proyecto {
   position: absolute;
   display: flex;
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
   justify-content: center;
+  max-width: 20rem;
+  max-height: 20rem;
 }
 
 .imagen-proyecto {
@@ -488,8 +490,8 @@ header {
 .div-descripcion-proyecto {
   background-color: rgb(226, 226, 226);
   border-radius: 15px;
-  width: 20rem;
-  height: 20rem;
+  width: 100%;
+  height: 100%;
   color: black;
   display: flex;
   align-items: center;
@@ -498,6 +500,8 @@ header {
   z-index: 2;
   opacity: 0;
   transition: 0.3s;
+  max-width: 20rem;
+  max-height: 20rem;
 }
 
 .div-descripcion-proyecto p {
