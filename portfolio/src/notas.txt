@@ -1,0 +1,20 @@
+html
+css3
+JavaScript
+typeScript
+React
+nextJS
+Vite
+Git
+Github
+posman
+bruno
+npm
+yarn
+bootstrap
+tailwind
+figma
+linux
+nodeJS
+POO
+rest API
